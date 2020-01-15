@@ -2,12 +2,14 @@
 
 int main()
 {
-  int color;
-  int color2;
-  int rotate;
+  char color;
+  char color2;
+  float rotate;
   
-  color = /camera input/
-  color2 = /player input/
+  //color = camera_input
+  //color2 = player_input
+  cin >> color;
+  cin >> color2;
   
   if ( color == r ) {
     if ( color2 == y ) {
