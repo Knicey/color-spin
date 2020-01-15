@@ -10,13 +10,13 @@ int main()
   color2 = /player input/
   
   if ( color == r ) {
-  if ( color2 == y ) {
-  rotate = .125
-  }
-  else if ( color2 == c ) {
-      rotate = .25 )
-      rotate = -.125
-  }	
+    if ( color2 == y ) {
+    rotate = .125
+    }
+    else if ( color2 == c ) {
+        rotate = .25 )
+        rotate = -.125
+    }	
   }
   else if ( color == y ) {
     if ( color2 == r ) {
