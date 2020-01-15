@@ -14,6 +14,7 @@ int main()
   cin >> color;
   cin >> color2;
   
+  //The first if-elseif statement can only check for 3 different conditions, that is why the last operation leads into an if-else
   if ( color == r ) {
     if ( color2 == y ) {
     rotate = .125
