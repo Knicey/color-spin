@@ -6,8 +6,11 @@ int main()
   char color2;
   float rotate;
   
+  //This is the actual code that would be used, it's commented currently to test the rest of the function
   //color = camera_input
   //color2 = player_input
+  
+  //These are just to test inputs (temporary)
   cin >> color;
   cin >> color2;
   
