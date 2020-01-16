@@ -7,7 +7,7 @@ int main()
   float rotate;
   using namespace std;
   //This is the actual code that would be used, it's commented currently to test the rest of the function
-  //color = camera_input
+  //sensor_color = camera_input
   //fms_color = player_input
   
   //These are just to test inputs (temporary)
