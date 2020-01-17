@@ -6,15 +6,9 @@ int main()
   char fms_color;
   float rotate;
   using namespace std;
-  //This is the actual code that would be used, it's commented currently to test the rest of the function
-  //sensor_color = camera_input
-  //fms_color = player_input
-  
-  //These are just to test inputs (temporary)
-  cin >> sensor_color;
-  cin >> fms_color;
+  sensor_color = camera_input
+  fms_color = player_input
  
-  //Using else if statements following an if statement optimizes processing
   if (sensor_color == 'r') {
 	  if (fms_color == 'y') {
 		  rotate = .125;
@@ -62,6 +56,4 @@ int main()
 	  	  rotate = -.125;	
 	  	}
 	  }
-
-  cout << rotate;
 }  
