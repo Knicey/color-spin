@@ -1,9 +1,8 @@
 #include "ros/ros.h"
 #include "color_spin/rotate.h"
 
-bool add(color_spin::rotation::Request &req,
+bool rotate(color_spin::rotation::Request &req,
 	color_spin::rotation::Response &res)
-
 {
   if (sensor_color == 'r') {
 	  if (fms_color == 'y') {
@@ -16,7 +15,6 @@ bool add(color_spin::rotation::Request &req,
 	  	  rotate = -.125;	
 	  	}
 	  }
- 
   else if (sensor_color == 'y') {
 	  if (fms_color == 'r') {
 		  rotate = -.125;
@@ -28,7 +26,6 @@ bool add(color_spin::rotation::Request &req,
 	  	  rotate = .25;
 	  	}
 	  }
-
   else if (sensor_color == 'c') {
 	  if (fms_color == 'r') {
 		  rotate = .25;
@@ -40,7 +37,6 @@ bool add(color_spin::rotation::Request &req,
 	  	  rotate = -.125;
 	  	}
    	  }
-
   else if (sensor_color == 'g') {
 	  if (fms_color == 'r') {
 		  rotate = .125;
@@ -50,20 +46,17 @@ bool add(color_spin::rotation::Request &req,
 		}
 	  else if (fms_color == 'c') {
 	  	  rotate = -.125;	
-	return true;
-
+  ROS_INFO("request = x%1d, y=%1d", (char)req.color_fms, (char)req.color_sensor.b);
+  ROS_INFO("sending response = [x%1d]", (float)res.rotate);
+  return true;
 }
 
-int main(char color1, char color2)
+int main(int argc, char **argv)
 {
-	ros::init(argc, argv, "color_spin");
-	
+	ros::init(argc, argv, "color_spin_rotation");
 	ros::NodeHandle nh;
-
-	
-	ros::ServiceServer service = n.advertiseService("color_spin_rotation", add)
-	
-	ROS_INFO(
+	ros::ServiceServer service = n.advertiseService("color_spin_rotation", rotate);
+	ROS_INFO("Ready to calculate rotation");
 	ros::spin();
 
 	return 0;
