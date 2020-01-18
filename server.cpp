@@ -1,9 +1,8 @@
-#include "iostream"
-
 #include "ros/ros.h"
+#include "color_spin/rotate.h"
 
-bool add([]::[]::Request &req,
-	[]::[]::Response &res)
+bool add(color_spin::rotation::Request &req,
+	color_spin::rotation::Response &res)
 
 {
   if (sensor_color == 'r') {
